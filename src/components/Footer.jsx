@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   MessageCircle,
   ShoppingBag,
 } from "lucide-react";
