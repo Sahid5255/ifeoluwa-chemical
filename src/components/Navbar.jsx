@@ -49,15 +49,19 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#173d2b]/10 bg-[#faf9f5]/95 backdrop-blur-xl">
       <div className="mx-auto flex min-h-[78px] w-[92%] max-w-[1200px] items-center justify-between">
+
         {/* Logo */}
         <Link
           to="/"
           onClick={closeMenu}
-          className="relative text-xl font-black tracking-[0.16em] text-[#173d2b]"
+          className="flex items-center"
+          aria-label="Ifeoluwa Home"
         >
-          IFEOLUWA
-
-          <span className="absolute -bottom-2 left-0 h-[2px] w-5 bg-[#a27b35]" />
+          <img
+            src="/images/logo.png"
+            alt="Ifeoluwa"
+            className="h-14 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
