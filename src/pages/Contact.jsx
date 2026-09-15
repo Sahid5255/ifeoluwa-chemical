@@ -37,6 +37,7 @@ function Contact() {
       {/* Contact options */}
       <section className="mx-auto w-[92%] max-w-[1200px] py-20 md:py-24">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* WhatsApp */}
           <a
             href="https://wa.me/2348138241497"
             target="_blank"
@@ -70,28 +71,149 @@ function Contact() {
             </div>
           </a>
 
-          <div className="rounded-[30px] border border-[#173d2b]/10 bg-white p-8">
-            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f3f1e9] text-[#173d2b]">
+          {/* Email */}
+          <a
+            href="mailto:prmary779@gmail.com"
+            className="group rounded-[30px] border border-[#173d2b]/10 bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#173d2b]/10"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f3f1e9] text-[#173d2b] transition-transform duration-500 group-hover:scale-110">
               <Mail size={25} />
             </div>
 
-            <span className="mt-8 block text-xs font-bold uppercase tracking-[0.15em] text-[#a27b35]">
-              Email
+            <div className="mt-8 flex items-end justify-between gap-5">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#a27b35]">
+                  Email Us
+                </span>
+
+                <h2 className="mt-2 text-2xl font-extrabold text-[#173d2b]">
+                  prmary779@gmail.com
+                </h2>
+
+                <p className="mt-3 max-w-md text-sm leading-7 text-[#69756d]">
+                  Prefer email? Send us your questions, order
+                  details, or product enquiries.
+                </p>
+              </div>
+
+              <ArrowUpRight
+                size={23}
+                className="shrink-0 text-[#a27b35]"
+              />
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* Email Contact Form */}
+      <section className="bg-[#f7f5ee] py-20 md:py-24">
+        <div className="mx-auto w-[92%] max-w-[900px]">
+          <div className="mb-12 text-center">
+            <span className="text-xs font-extrabold tracking-[0.2em] text-[#a27b35]">
+              SEND US A MESSAGE
             </span>
 
-            <h2 className="mt-2 text-2xl font-extrabold text-[#173d2b]">
-              Prefer email?
+            <h2 className="mt-4 text-4xl font-extrabold text-[#173d2b] sm:text-5xl">
+              How can we help?
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-[#69756d]">
-              Our email contact will be available here once the
-              official IFEOLUWA business email is added.
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[#69756d]">
+              Fill out the form below and your message will be
+              sent to our email. We'll get back to you as soon as
+              possible.
             </p>
-
-            <div className="mt-6 rounded-2xl bg-[#f7f5ee] p-4 text-sm font-bold text-[#69756d]">
-              Official email coming soon
-            </div>
           </div>
+
+          <form
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            className="rounded-[30px] bg-white p-7 shadow-sm md:p-10"
+          >
+            {/* Customer name */}
+            <div>
+              <label
+                htmlFor="name"
+                className="mb-2 block text-sm font-bold text-[#173d2b]"
+              >
+                Full Name
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+                className="w-full rounded-2xl border border-[#173d2b]/10 bg-[#faf9f5] px-5 py-4 text-sm text-[#173d2b] outline-none transition focus:border-[#a27b35] focus:ring-2 focus:ring-[#a27b35]/10"
+              />
+            </div>
+
+            {/* Customer email */}
+            <div className="mt-6">
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm font-bold text-[#173d2b]"
+              >
+                Email Address
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                className="w-full rounded-2xl border border-[#173d2b]/10 bg-[#faf9f5] px-5 py-4 text-sm text-[#173d2b] outline-none transition focus:border-[#a27b35] focus:ring-2 focus:ring-[#a27b35]/10"
+              />
+            </div>
+
+            {/* Subject */}
+            <div className="mt-6">
+              <label
+                htmlFor="subject"
+                className="mb-2 block text-sm font-bold text-[#173d2b]"
+              >
+                Subject
+              </label>
+
+              <input
+                id="subject"
+                type="text"
+                name="subject"
+                placeholder="What would you like to ask?"
+                required
+                className="w-full rounded-2xl border border-[#173d2b]/10 bg-[#faf9f5] px-5 py-4 text-sm text-[#173d2b] outline-none transition focus:border-[#a27b35] focus:ring-2 focus:ring-[#a27b35]/10"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="mt-6">
+              <label
+                htmlFor="message"
+                className="mb-2 block text-sm font-bold text-[#173d2b]"
+              >
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us how we can help..."
+                required
+                className="w-full resize-none rounded-2xl border border-[#173d2b]/10 bg-[#faf9f5] px-5 py-4 text-sm text-[#173d2b] outline-none transition focus:border-[#a27b35] focus:ring-2 focus:ring-[#a27b35]/10"
+              />
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#173d2b] px-7 py-4 text-sm font-bold text-white transition hover:-translate-y-1 hover:bg-[#a27b35] hover:text-[#173d2b]"
+            >
+              Send Message
+              <ArrowUpRight size={18} />
+            </button>
+          </form>
         </div>
       </section>
 
